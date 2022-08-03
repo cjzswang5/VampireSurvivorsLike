@@ -1,0 +1,540 @@
+fileFormatVersion: 2
+guid: 7ea1193d80ebd5040816ea7ba7fa20e1
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 7342896056392834507
+    second: character_pikachu_0
+  - first:
+      213: 8815584205241457210
+    second: character_pikachu_1
+  - first:
+      213: 821149362882499680
+    second: character_pikachu_2
+  - first:
+      213: -6993684840971968288
+    second: character_pikachu_3
+  - first:
+      213: 6041466906626214689
+    second: character_pikachu_4
+  - first:
+      213: -2555535693305900610
+    second: character_pikachu_5
+  - first:
+      213: -2697676246263438398
+    second: character_pikachu_6
+  - first:
+      213: 7256646515071570330
+    second: character_pikachu_7
+  - first:
+      213: -559036404161332354
+    second: character_pikachu_8
+  - first:
+      213: 4704881676298956697
+    second: character_pikachu_9
+  - first:
+      213: -2665160392776239629
+    second: character_pikachu_10
+  - first:
+      213: -3402118598159939215
+    second: character_pikachu_11
+  - first:
+      213: -9188126535167845778
+    second: character_pikachu_12
+  - first:
+      213: -1869136259045458362
+    second: character_pikachu_13
+  - first:
+      213: -215706260652574878
+    second: character_pikachu_14
+  - first:
+      213: 7685686947237327264
+    second: character_pikachu_15
+  - first:
+      213: 1056969664888543856
+    second: character_pikachu_16
+  - first:
+      213: -4154630344769001693
+    second: character_pikachu_17
+  - first:
+      213: -5045989319804214437
+    second: character_pikachu_18
+  - first:
+      213: -6675946923415512812
+    second: character_pikachu_19
+  - first:
+      213: -243687412529526641
+    second: character_pikachu_20
+  - first:
+      213: -6558414928742671953
+    second: character_pikachu_21
+  - first:
+      213: -2468065885348670575
+    second: character_pikachu_22
+  - first:
+      213: 4874841286928136360
+    second: character_pikachu_23
+  - first:
+      213: -675428591705322286
+    second: character_pikachu_24
+  - first:
+      213: -582336079791429199
+    second: character_pikachu_25
+  - first:
+      213: 4992314231749438891
+    second: character_pikachu_26
+  - first:
+      213: 514736942706429897
+    second: character_pikachu_27
+  - first:
+      213: 1206917818375888770
+    second: character_pikachu_28
+  - first:
+      213: -2836735623009465490
+    second: character_pikachu_29
+  - first:
+      213: 4041750943934678806
+    second: character_pikachu_30
+  - first:
+      213: 6824823257988314420
+    second: character_pikachu_31
+  - first:
+      213: 7251769878230990938
+    second: character_pikachu_32
+  - first:
+      213: -732649474577406122
+    second: character_pikachu_33
+  - first:
+      213: 6370524375734135709
+    second: character_pikachu_34
+  - first:
+      213: -6809128714612335519
+    second: character_pikachu_35
+  - first:
+      213: 669575389708411770
+    second: character_pikachu_36
+  - first:
+      213: 8032951103311379190
+    second: character_pikachu_37
+  - first:
+      213: -2602160298995330452
+    second: character_pikachu_38
+  - first:
+      213: 2724439939487242963
+    second: character_pikachu_39
+  - first:
+      213: 3842561406729381868
+    second: character_pikachu_40
+  - first:
+      213: -8450111182774276432
+    second: character_pikachu_41
+  - first:
+      213: 8297066063646085938
+    second: character_pikachu_42
+  - first:
+      213: -5483006914638314611
+    second: character_pikachu_43
+  - first:
+      213: -7647118366014334491
+    second: character_pikachu_44
+  - first:
+      213: 4863425979352773936
+    second: character_pikachu_45
+  - first:
+      213: -8405800591778443922
+    second: character_pikachu_46
+  - first:
+      213: -1435809914488641131
+    second: character_pikachu_47
+  - first:
+      213: 716302947503933813
+    second: character_pikachu_48
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: character_pikachu_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.28, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bcd59e71f0537e560800000000000000
+      internalID: 7342896056392834507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 216
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.28, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3a16f0b02f375a70800000000000000
+      internalID: 8815584205241457210
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_2
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 216
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.28, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0645622befe456b00800000000000000
+      internalID: 821149362882499680
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_3
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 216
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.28, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0e0e4d6f0b071fe90800000000000000
+      internalID: -6993684840971968288
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_4
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 216
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.28, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 12bcbbb742a97d350800000000000000
+      internalID: 6041466906626214689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_5
+      rect:
+        serializedVersion: 2
+        x: 200
+        y: 216
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.28, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eb19ba5a3d9e88cd0800000000000000
+      internalID: -2555535693305900610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_6
+      rect:
+        serializedVersion: 2
+        x: 240
+        y: 216
+        width: 40
+        height: 40
+      alignment: 9
+      pivot: {x: 0.28, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c365763fbdef8ad0800000000000000
+      internalID: -2697676246263438398
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 177
+        width: 46
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91da6fde89c4b460800000000000000
+      internalID: 7256646515071570330
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_8
+      rect:
+        serializedVersion: 2
+        x: 46
+        y: 177
+        width: 46
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7bb3713a57ed38f0800000000000000
+      internalID: -559036404161332354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_9
+      rect:
+        serializedVersion: 2
+        x: 93
+        y: 177
+        width: 44
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f2b0205f81b4140800000000000000
+      internalID: 4704881676298956697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_10
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 177
+        width: 44
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f5b12f4eb2730bd0800000000000000
+      internalID: -2665160392776239629
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_11
+      rect:
+        serializedVersion: 2
+        x: 183
+        y: 177
+        width: 45
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1794de0092f39c0d0800000000000000
+      internalID: -3402118598159939215
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: character_pikachu_12
+      rect:
+        serializedVersion: 2
+        x: 229
+        y: 177
+        width: 46
+        height: 38
+      alignment: 9
+      pivot: {x: 0.4, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6adaf7d8973d7080800000000000000
+      internalID: -9188126535167845778
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 8765a6e3a77a27b4ab59f6fcf533fc19
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
