@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public enum PlayerState     // 玩家动作状态
 {
@@ -10,34 +11,41 @@ public enum PlayerState     // 玩家动作状态
 
 public enum PlayerToward    // 玩家朝向
 {
-    Left    = 0,
-    Right   = 1,
+    L = 0,
+    R = 1,
 };
 
 public class MainCharacterControl : MonoBehaviour
 {
     public float speed = 3f;
 
-    public delegate void OnTowardChangehandler(PlayerToward m_toward);
+    public delegate void OnTowardChangehandler(PlayerToward toward);
     public OnTowardChangehandler onTowardChange;
 
-    public PlayerState    m_state;
-
-    private PlayerToward  toward;
-    public PlayerToward   m_toward
+    private PlayerToward _toward;
+    public PlayerToward toward
     {
-        get { return toward; }
+        get { return _toward; }
         set {
-            toward = value;
-            onTowardChange?.Invoke(toward);
+            bool isTowardChanged = (_toward != value);
+            _toward = value;
+            spriteRenderer.flipX = (toward == PlayerToward.R);
+            if (isTowardChanged)
+                onTowardChange?.Invoke(_toward);
         }
     }
 
+    public PlayerState m_state;
+
     [SerializeField] Animator animator;
     [SerializeField] SpriteRenderer spriteRenderer;
+    [SerializeField] Collider2D playerCollider;
 
     Vector3 tmpVector3 = new Vector3();
-    Vector3 currLocalPosition = new Vector3();
+    [HideInInspector] public Vector3        currLocalPosition = new Vector3();
+    [HideInInspector] public Rigidbody2D    rBody2d;
+
+    private bool isMoveing = false;
 
     const float SPEED_MUL = 100f;
 
@@ -48,20 +56,13 @@ public class MainCharacterControl : MonoBehaviour
         vector3.z = Mathf.Floor(vector3.z);
     }
 
-    void OnTowardChange(PlayerToward playerToward)
-    {
-        spriteRenderer.flipX = (m_toward == PlayerToward.Right);
-    }
-
     void Awake()
     {
         m_state = PlayerState.Idle;
         currLocalPosition = new Vector3(0f, 0f, 0f);
         transform.localPosition = currLocalPosition;
-        //animator = gameObject.GetComponent<Animator>();
-        m_toward = PlayerToward.Left;
-        onTowardChange += OnTowardChange;
-        //spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        toward = PlayerToward.L;
+        rBody2d = gameObject.GetComponent<Rigidbody2D>();
     }
 
     void Start()
@@ -69,6 +70,10 @@ public class MainCharacterControl : MonoBehaviour
     }
 
     void Update()
+    {
+    }
+
+    void FixedUpdate()
     {
         ProcessState();
         ProcessMove();
@@ -93,19 +98,9 @@ public class MainCharacterControl : MonoBehaviour
         }
     }
 
-    bool isMoveing = false;
-    bool IsMoving()
-    {
-        isMoveing = Input.GetKey(KeyCode.W);
-        isMoveing = isMoveing || Input.GetKey(KeyCode.S);
-        isMoveing = isMoveing || Input.GetKey(KeyCode.A);
-        isMoveing = isMoveing || Input.GetKey(KeyCode.D);
-        return isMoveing;
-    }
-
     void ProcessState()
     {
-        if (IsMoving()) {
+        if (isMoveing) {
             ChangeState(PlayerState.Move);
         } else {
             ChangeState(PlayerState.Idle);
@@ -116,52 +111,18 @@ public class MainCharacterControl : MonoBehaviour
     {
         bool keyL = Input.GetKey(KeyCode.A);
         bool keyR = Input.GetKey(KeyCode.D);
-        if (keyL && !keyR && m_toward == PlayerToward.Right) {
-            m_toward = PlayerToward.Left;
-        } else if (!keyL && keyR && m_toward == PlayerToward.Left) {
-            m_toward = PlayerToward.Right;
+        if (keyL && !keyR && toward == PlayerToward.R) {
+            toward = PlayerToward.L;
+        } else if (!keyL && keyR && toward == PlayerToward.L) {
+            toward = PlayerToward.R;
         } else {}
     }
 
     void ProcessMove()
     {
-        if (Input.GetKey(KeyCode.W)) {
-            ProcessMoveKey(KeyCode.W);
-        }
-        if (Input.GetKey(KeyCode.S)) {
-            ProcessMoveKey(KeyCode.S);
-        }
-        if (Input.GetKey(KeyCode.A)) {
-            ProcessMoveKey(KeyCode.A);
-        }
-        if (Input.GetKey(KeyCode.D)) {
-            ProcessMoveKey(KeyCode.D);
-        }
+        Vector2 m = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
+        isMoveing = (m != Vector2.zero);
+        rBody2d.MovePosition(rBody2d.position + m.normalized * Time.deltaTime * speed * SPEED_MUL);
     }
 
-    void ProcessMoveKey(KeyCode keyCode)
-    {
-        tmpVector3.Set(0f, 0f, 0f);
-        switch (keyCode) {
-            case KeyCode.W:
-                tmpVector3.y =  1f;
-                break;
-            case KeyCode.S:
-                tmpVector3.y = -1f;
-                break;
-            case KeyCode.A:
-                tmpVector3.x = -1f;
-                break;
-            case KeyCode.D:
-                tmpVector3.x =  1f;
-                break;
-            default:
-                break;
-        }
-        tmpVector3 = tmpVector3.normalized * speed * Time.deltaTime * SPEED_MUL;
-        currLocalPosition += tmpVector3;
-        tmpVector3 = currLocalPosition;
-        FloorVector3(ref tmpVector3);
-        transform.localPosition = tmpVector3;
-    }
 }

@@ -704,7 +704,7 @@ namespace DG.DOTweenEditor
         {
             GUILayout.BeginHorizontal();
             GUIToFromButton();
-            _src.endValueString = EditorGUILayout.TextArea(_src.endValueString, EditorGUIUtils.wordWrapTextArea);
+            _src.endValueString = EditorGUILayout.TextArea(_src.endValueString, EditorGUIUtils.wordWrapTextArea.Padding(0,0,0,0).Margin(0,0,0,0));
             GUILayout.EndHorizontal();
         }
 
