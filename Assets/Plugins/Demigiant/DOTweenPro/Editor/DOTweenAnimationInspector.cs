@@ -220,13 +220,13 @@ namespace DG.DOTweenEditor
             GUILayout.Label(_src.animationType.ToString() + (string.IsNullOrEmpty(_src.id) ? "" : " [" + _src.id + "]"), EditorGUIUtils.sideLogoIconBoldLabelStyle);
             // Up-down buttons
             GUILayout.FlexibleSpace();
-            if (GUILayout.Button("▲", DeGUI.styles.button.toolIco)) UnityEditorInternal.ComponentUtility.MoveComponentUp(_src);
-            if (GUILayout.Button("▼", DeGUI.styles.button.toolIco)) UnityEditorInternal.ComponentUtility.MoveComponentDown(_src);
+            if (GUILayout.Button("▲", DeGUI.styles.button.tool)) UnityEditorInternal.ComponentUtility.MoveComponentUp(_src);
+            if (GUILayout.Button("▼", DeGUI.styles.button.tool)) UnityEditorInternal.ComponentUtility.MoveComponentDown(_src);
             GUILayout.EndHorizontal();
 
             if (playMode) {
                 if (_runtimeEditMode) {
-                    
+
                 } else {
                     GUILayout.Space(8);
                     GUILayout.Label("Animation Editor disabled while in play mode", EditorGUIUtils.wordWrapLabelStyle);
@@ -270,26 +270,24 @@ namespace DG.DOTweenEditor
                     GUILayout.Label("To apply your changes when exiting Play mode, use the Component's upper right menu and choose \"Copy Component\", then \"Paste Component Values\" after exiting Play mode", DeGUI.styles.label.wordwrap);
                 DeGUILayout.EndVBox();
             } else {
-                GUILayout.BeginHorizontal();
                 bool hasManager = _src.GetComponent<DOTweenVisualManager>() != null;
-                EditorGUI.BeginChangeCheck();
-                _settings.showPreviewPanel = hasManager
-                    ? DeGUILayout.ToggleButton(_settings.showPreviewPanel, "Preview Controls", styles.custom.inlineToggle)
-                    : DeGUILayout.ToggleButton(_settings.showPreviewPanel, "Preview Controls", styles.custom.inlineToggle, GUILayout.Width(120));
-                if (EditorGUI.EndChangeCheck()) {
-                    EditorUtility.SetDirty(_settings);
-                    DOTweenPreviewManager.StopAllPreviews();
-                }
                 if (!hasManager) {
                     if (GUILayout.Button(new GUIContent("Add Manager", "Adds a manager component which allows you to choose additional options for this gameObject"))) {
                         _src.gameObject.AddComponent<DOTweenVisualManager>();
                     }
                 }
-                GUILayout.EndHorizontal();
+                EditorGUI.BeginChangeCheck();
+                _settings.showPreviewPanel = DeGUILayout.ToggleButton(_settings.showPreviewPanel, "Preview Controls", styles.custom.inlineToggle);
+                if (EditorGUI.EndChangeCheck()) {
+                    EditorUtility.SetDirty(_settings);
+                    DOTweenPreviewManager.StopAllPreviews();
+                }
             }
 
             // Preview in editor
             bool isPreviewing = _settings.showPreviewPanel ? DOTweenPreviewManager.PreviewGUI(_src) : false;
+
+            EditorGUILayout.Space(4);
 
             EditorGUI.BeginDisabledGroup(isPreviewing);
             // Choose target
@@ -300,7 +298,7 @@ namespace DG.DOTweenEditor
                         _src.targetIsSelf = DeGUILayout.ToggleButton(
                             _src.targetIsSelf, _src.targetIsSelf ? _GuiC_selfTarget_true : _GuiC_selfTarget_false,
                             new Color(1f, 0.78f, 0f), DeGUI.colors.bg.toggleOn, new Color(0.33f, 0.14f, 0.02f), DeGUI.colors.content.toggleOn,
-                            null, GUILayout.Width(47)
+                            null, GUILayout.Width(50)
                         );
                     bool innerChanged = EditorGUI.EndChangeCheck();
                     if (innerChanged) {
@@ -462,7 +460,7 @@ namespace DG.DOTweenEditor
                 GUILayout.BeginHorizontal();
                 _src.duration = EditorGUILayout.FloatField("Duration", _src.duration);
                 if (_src.duration < 0) _src.duration = 0;
-                _src.isSpeedBased = DeGUILayout.ToggleButton(_src.isSpeedBased, new GUIContent("SpeedBased", "If selected, the duration will count as units/degree x second"), DeGUI.styles.button.tool, GUILayout.Width(75));
+                _src.isSpeedBased = DeGUILayout.ToggleButton(_src.isSpeedBased, new GUIContent("SpeedBased", "If selected, the duration will count as units/degree x second"), DeGUI.styles.button.bBlankBorder, GUILayout.Width(80), GUILayout.Height(18));
                 GUILayout.EndHorizontal();
                 _src.delay = EditorGUILayout.FloatField("Delay", _src.delay);
                 if (_src.delay < 0) _src.delay = 0;
@@ -564,7 +562,7 @@ namespace DG.DOTweenEditor
                 if (canBeRelative) _src.isRelative = EditorGUILayout.Toggle("    Relative", _src.isRelative);
 
                 // Events
-                AnimationInspectorGUI.AnimationEvents(this, _src);
+                //AnimationInspectorGUI.AnimationEvents(this, _src);
             }
             EditorGUI.EndDisabledGroup();
 

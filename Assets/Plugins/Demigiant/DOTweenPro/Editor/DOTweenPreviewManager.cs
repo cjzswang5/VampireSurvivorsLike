@@ -40,55 +40,92 @@ namespace DG.DOTweenEditor
                 : new DeSkinColor(Color.white, new Color(0.13f, 0.13f, 0.13f));
             GUILayout.BeginVertical(Styles.previewBox);
             DeGUI.ResetGUIColors();
-            GUILayout.BeginHorizontal();
+            GUILayout.BeginHorizontal(Styles.previewTitle);
             GUILayout.Label("Preview Mode - Experimental", Styles.previewLabel);
+            GUILayout.FlexibleSpace();
             _previewOnlyIfSetToAutoPlay = DeGUILayout.ToggleButton(
                 _previewOnlyIfSetToAutoPlay,
                 new GUIContent("AutoPlay only", "If toggled only previews animations that have AutoPlay turned ON"),
                 Styles.btOption
             );
             GUILayout.EndHorizontal();
-            GUILayout.Space(1);
+            GUILayout.Space(4);
             // Preview - Play
-            GUILayout.BeginHorizontal();
-            EditorGUI.BeginDisabledGroup(
-                isPreviewingThis || src.animationType == DOTweenAnimation.AnimationType.None
-                || !src.isActive || _previewOnlyIfSetToAutoPlay && !src.autoPlay
-            );
-            if (GUILayout.Button("► Play", Styles.btPreview)) {
-                if (!isPreviewing) StartupGlobalPreview();
-                AddAnimationToGlobalPreview(src);
+            GUILayout.BeginHorizontal(Styles.previewButtons);
+//            EditorGUI.BeginDisabledGroup(
+//                isPreviewingThis || src.animationType == DOTweenAnimation.AnimationType.None
+//                || !src.isActive || _previewOnlyIfSetToAutoPlay && !src.autoPlay
+//            );
+            if (isPreviewing && isPreviewingThis) {
+                if (GUILayout.Button(EditorGUIUtility.IconContent("d_PlayButton") , Styles.btPreviewPlaying, GUILayout.MinWidth(40))) {
+
+                    if (_AnimationToTween.ContainsKey(src))
+                        StopPreview(_AnimationToTween[src].tween);
+                }
+            } else {
+                if (GUILayout.Button(EditorGUIUtility.IconContent("d_PlayButton"), Styles.btPreviewPlay, GUILayout.MinWidth(40))) {
+                     StartupGlobalPreview();
+                    AddAnimationToGlobalPreview(src);
+                }
             }
-            EditorGUI.EndDisabledGroup();
-            EditorGUI.BeginDisabledGroup(isPreviewing);
-            if (GUILayout.Button("► Play All <i>on GameObject</i>", Styles.btPreview)) {
-                if (!isPreviewing) StartupGlobalPreview();
-                DOTweenAnimation[] anims = src.gameObject.GetComponents<DOTweenAnimation>();
-                foreach (DOTweenAnimation anim in anims) AddAnimationToGlobalPreview(anim);
+            if (isPreviewing) {
+                if (GUILayout.Button("Stop All", Styles.btPreviewPlaying, GUILayout.MinWidth(80))) {
+                    StopPreview(src.gameObject);
+                }
+            } else {
+                if (GUILayout.Button("Play All", Styles.btPreviewPlay, GUILayout.MinWidth(80))) {
+                    if (!isPreviewing) StartupGlobalPreview();
+                    DOTweenAnimation[] anims = src.gameObject.GetComponents<DOTweenAnimation>();
+                    foreach (DOTweenAnimation anim in anims) AddAnimationToGlobalPreview(anim);
+                }
             }
-            if (GUILayout.Button("► Play All <i>in Scene</i>", Styles.btPreview)) {
-                if (!isPreviewing) StartupGlobalPreview();
-                DOTweenAnimation[] anims = Object.FindObjectsOfType<DOTweenAnimation>();
-                foreach (DOTweenAnimation anim in anims) AddAnimationToGlobalPreview(anim);
+            if (isPreviewing) {
+                if (GUILayout.Button("Stop All in Scene", Styles.btPreviewPlaying)) {
+                    StopAllPreviews();
+                }
+            } else {
+                if (GUILayout.Button("Play All in Scene", Styles.btPreviewPlay)) {
+                    if (!isPreviewing) StartupGlobalPreview();
+                    DOTweenAnimation[] anims = Object.FindObjectsOfType<DOTweenAnimation>();
+                    foreach (DOTweenAnimation anim in anims) AddAnimationToGlobalPreview(anim);
+                }
             }
-            EditorGUI.EndDisabledGroup();
             GUILayout.EndHorizontal();
-            // Preview - Stop
-            GUILayout.BeginHorizontal();
-            EditorGUI.BeginDisabledGroup(!isPreviewingThis);
-            if (GUILayout.Button("■ Stop", Styles.btPreview)) {
-                if (_AnimationToTween.ContainsKey(src)) StopPreview(_AnimationToTween[src].tween);
-            }
-            EditorGUI.EndDisabledGroup();
-            EditorGUI.BeginDisabledGroup(!isPreviewing);
-            if (GUILayout.Button("■ Stop All <i>on GameObject</i>", Styles.btPreview)) {
-                StopPreview(src.gameObject);
-            }
-            if (GUILayout.Button("■ Stop All <i>in Scene</i>", Styles.btPreview)) {
-                StopAllPreviews();
-            }
-            EditorGUI.EndDisabledGroup();
-            GUILayout.EndHorizontal();
+            GUILayout.Space(4);
+//            if (GUILayout.Button("► Play", Styles.btPreview)) {
+//                if (!isPreviewing) StartupGlobalPreview();
+//                AddAnimationToGlobalPreview(src);
+//            }
+//            EditorGUI.EndDisabledGroup();
+//            EditorGUI.BeginDisabledGroup(isPreviewing);
+//            if (GUILayout.Button("► Play all <i>on GameObject</i>", Styles.btPreview)) {
+//                if (!isPreviewing) StartupGlobalPreview();
+//                DOTweenAnimation[] anims = src.gameObject.GetComponents<DOTweenAnimation>();
+//                foreach (DOTweenAnimation anim in anims) AddAnimationToGlobalPreview(anim);
+//            }
+//            if (GUILayout.Button("► Play All <i>in Scene</i>", Styles.btPreview)) {
+//                if (!isPreviewing) StartupGlobalPreview();
+//                DOTweenAnimation[] anims = Object.FindObjectsOfType<DOTweenAnimation>();
+//                foreach (DOTweenAnimation anim in anims) AddAnimationToGlobalPreview(anim);
+//            }
+//            EditorGUI.EndDisabledGroup();
+//            GUILayout.EndHorizontal();
+//            // Preview - Stop
+//            GUILayout.BeginHorizontal();
+//            EditorGUI.BeginDisabledGroup(!isPreviewingThis);
+//            if (GUILayout.Button("■ Stop", Styles.btPreview)) {
+//                if (_AnimationToTween.ContainsKey(src)) StopPreview(_AnimationToTween[src].tween);
+//            }
+//            EditorGUI.EndDisabledGroup();
+//            EditorGUI.BeginDisabledGroup(!isPreviewing);
+//            if (GUILayout.Button("■ Stop All <i>on GameObject</i>", Styles.btPreview)) {
+//                StopPreview(src.gameObject);
+//            }
+//            if (GUILayout.Button("■ Stop All <i>in Scene</i>", Styles.btPreview)) {
+//                StopAllPreviews();
+//            }
+//            EditorGUI.EndDisabledGroup();
+//            GUILayout.EndHorizontal();
             if (isPreviewing) {
                 int playingTweens = 0;
                 int completedTweens = 0;
@@ -102,6 +139,9 @@ namespace DG.DOTweenEditor
                 GUILayout.Label("Playing Tweens: " + playingTweens, Styles.previewStatusLabel);
                 GUILayout.Label("Completed Tweens: " + completedTweens, Styles.previewStatusLabel);
 //                GUILayout.Label("Paused Tweens: " + playingTweens);
+            } else {
+                GUILayout.Label("Playing Tweens:", Styles.previewStatusLabel);
+                GUILayout.Label("Completed Tweens:", Styles.previewStatusLabel);
             }
             GUILayout.EndVertical();
 
@@ -244,7 +284,9 @@ namespace DG.DOTweenEditor
         {
             static bool _initialized;
 
-            public static GUIStyle previewBox, previewLabel, btOption, btPreview, previewStatusLabel;
+            public static GUIStyle previewBox, previewLabel, btOption, btPreview, btPreviewPlay, btPreviewPlaying, previewStatusLabel;
+            public static GUIStyle previewButtons;
+            public static GUIStyle previewTitle;
 
             public static void Init()
             {
@@ -254,10 +296,16 @@ namespace DG.DOTweenEditor
 
                 previewBox = new GUIStyle(GUI.skin.box).Clone().Padding(1, 1, 0, 3)
                     .Background(DeStylePalette.squareBorderCurved_darkBorders).Border(7, 7, 7, 7);
-                previewLabel = new GUIStyle(GUI.skin.label).Clone(10, FontStyle.Bold).Padding(1, 0, 3, 0).Margin(3, 6, 0, 0).StretchWidth(false);
-                btOption = DeGUI.styles.button.bBlankBorderCompact.MarginBottom(2).MarginRight(4);
+                previewLabel = new GUIStyle(GUI.skin.label).Clone(10, FontStyle.Bold).Margin(0, 0, 0, 0);
+                btOption = DeGUI.styles.button.bBlankBorderCompact.Margin(0, 0, 0, 0);
                 btPreview = EditorStyles.miniButton.Clone(Format.RichText);
                 previewStatusLabel = EditorStyles.miniLabel.Clone().Padding(4, 0, 0, 0).Margin(0);
+
+                btPreviewPlay       = EditorStyles.miniButtonMid.Clone(Format.RichText).Background(DeStylePalette.squareBorderCurvedEmpty).Margin(0, 0, 0, 0).Padding(0, 0, 0, 0);
+                btPreviewPlaying    = EditorStyles.miniButtonMid.Clone(Format.RichText).Background(DeStylePalette.squareBorderCurvedAlpha).Margin(0, 0, 0, 0).Padding(0, 0, 0, 0);
+                previewButtons      = new GUIStyle().Clone().MarginLeft(4).MarginRight(4).Padding(0, 0, 0, 0);
+
+                previewTitle        = new GUIStyle().Clone().MarginLeft(4).MarginRight(4).MarginTop(4);
             }
         }
     }
