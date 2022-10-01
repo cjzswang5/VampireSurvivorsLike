@@ -201,7 +201,7 @@ TextureImporter:
       213: 542022155948972490
     second: character_red_65
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -218,10 +218,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -230,12 +232,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -260,6 +262,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -287,6 +291,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -1696,9 +1712,75 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      character_red_43: 5697604451066429819
+      character_red_24: 4635781270394216199
+      character_red_65: 542022155948972490
+      character_red_49: 48078693164596052
+      character_red_31: 1469980104170013262
+      character_red_38: 4538245044234968325
+      character_red_8: -6060620697314838761
+      character_red_23: -8012096504259456106
+      character_red_32: -2533451662462150802
+      character_red_12: -1009795534470072349
+      character_red_26: 5323235005222850825
+      character_red_62: 8384130187114317824
+      character_red_44: -5506506369385179732
+      character_red_63: -8871651003869018361
+      character_red_15: -572627492633652125
+      character_red_7: 8769707866574899782
+      character_red_22: -1561462396068977004
+      character_red_45: -168816768614124488
+      character_red_1: 508520593517037128
+      character_red_21: -3054303890407092371
+      character_red_55: -188957437335870961
+      character_red_28: -6052026414923918235
+      character_red_54: 6316740380726277944
+      character_red_2: -1936009812800386840
+      character_red_0: -5095142724699737118
+      character_red_61: 637971213274506511
+      character_red_10: -5734984992920822235
+      character_red_36: -8427452001092838437
+      character_red_57: -3273681947182540843
+      character_red_34: 2269663650336370748
+      character_red_11: -8842060810213393936
+      character_red_39: 7389113000586007163
+      character_red_30: -6592528597679193281
+      character_red_51: -3567193781577986292
+      character_red_13: -2827834448711811200
+      character_red_50: -8464675618855278429
+      character_red_58: 7451666696269101996
+      character_red_47: -1619996831741143854
+      character_red_48: -5188879939571684626
+      character_red_17: -8037164600107657592
+      character_red_60: 1054306232974201060
+      character_red_27: -1227053691339868584
+      character_red_16: -6180308574883345616
+      character_red_19: -4582611246885012354
+      character_red_41: -4963236036165124893
+      character_red_33: -5550482860986015138
+      character_red_35: 4578403465448051136
+      character_red_18: 4847965969801387412
+      character_red_53: 1525090666360930663
+      character_red_6: 1806345484345486608
+      character_red_14: 8489838339382427739
+      character_red_9: -7125443896542597927
+      character_red_59: 2682125662419445000
+      character_red_5: 199603708661168119
+      character_red_64: 8132615797991823881
+      character_red_52: 2893802680630623035
+      character_red_3: 5751135602003412105
+      character_red_46: 363627530871378113
+      character_red_4: 3220103955335116219
+      character_red_37: 409479038203640442
+      character_red_20: 228822372149042539
+      character_red_42: 5132017426550643852
+      character_red_29: 1292218956830511806
+      character_red_25: -6679695481162526034
+      character_red_56: -8344745761490806163
+      character_red_40: -157704017945916060
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

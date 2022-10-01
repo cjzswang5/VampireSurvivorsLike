@@ -375,7 +375,7 @@ TextureImporter:
       213: 7228498334448735321
     second: sprite_items_123
   externalObjects: {}
-  serializedVersion: 11
+  serializedVersion: 12
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
@@ -392,10 +392,12 @@ TextureImporter:
     externalNormalMap: 0
     heightScale: 0.25
     normalMapFilter: 0
+    flipGreenChannel: 0
   isReadable: 0
   streamingMipmaps: 0
   streamingMipmapsPriority: 0
   vTOnly: 0
+  ignoreMasterTextureLimit: 0
   grayScaleToAlpha: 0
   generateCubemap: 6
   cubemapConvolution: 0
@@ -404,12 +406,12 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: -1
-    aniso: -1
-    mipBias: -100
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
     wrapU: 1
     wrapV: 1
-    wrapW: -1
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -434,6 +436,8 @@ TextureImporter:
   textureFormatSet: 0
   ignorePngGamma: 0
   applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 1
   platformSettings:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
@@ -461,6 +465,18 @@ TextureImporter:
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 3
     buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -3088,9 +3104,133 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    nameFileIdTable:
+      sprite_items_106: 8406650092100281167
+      sprite_items_99: 5883518971384157189
+      sprite_items_54: -6596519163981101743
+      sprite_items_60: -6192992575539349387
+      sprite_items_28: -7382240418812304617
+      sprite_items_7: 938711840351743542
+      sprite_items_38: 7536674303224594376
+      sprite_items_4: 314624492961450763
+      sprite_items_103: 5418935977046017339
+      sprite_items_29: -8720136270334553059
+      sprite_items_105: 4185438640018949468
+      sprite_items_73: -5436032442483251812
+      sprite_items_118: -5442749354217660457
+      sprite_items_120: 7171563188235169096
+      sprite_items_122: 983300818089475314
+      sprite_items_58: -7755202487789896472
+      sprite_items_10: -3306393700984353733
+      sprite_items_81: -8260733735661903472
+      sprite_items_35: -4978426132413054644
+      sprite_items_37: -4258015537457958665
+      sprite_items_114: 2020168682374515372
+      sprite_items_3: -82400937575883739
+      sprite_items_40: -1268290895860534185
+      sprite_items_115: 4476711825669665467
+      sprite_items_95: -750766732301692847
+      sprite_items_121: -2101615139426374210
+      sprite_items_19: 7689954664804139764
+      sprite_items_74: -3355033415791137653
+      sprite_items_77: -5083891788550212434
+      sprite_items_34: 5434616239145508874
+      sprite_items_109: -5623211050138952777
+      sprite_items_17: -8092973541831322914
+      sprite_items_85: 1091764527788085671
+      sprite_items_92: 4089980494361796143
+      sprite_items_78: -6959874646173144556
+      sprite_items_116: 2898930381824402213
+      sprite_items_56: 8716955964664743433
+      sprite_items_15: -7107363420155884103
+      sprite_items_23: 8095279622291977509
+      sprite_items_30: 6230084411388827874
+      sprite_items_53: -9133840302226938065
+      sprite_items_18: -2290418719018419200
+      sprite_items_45: 1442243722395793735
+      sprite_items_6: 3763487580381940714
+      sprite_items_97: -4438103713602798791
+      sprite_items_87: 1576127362468767662
+      sprite_items_63: -3303082031235690044
+      sprite_items_13: 5001492925695537564
+      sprite_items_47: 7953276813850125551
+      sprite_items_98: -8984063728833801269
+      sprite_items_89: 4549573113549656266
+      sprite_items_119: -4452594053495107332
+      sprite_items_26: -1253108841443780298
+      sprite_items_42: -5023411954026124098
+      sprite_items_46: 8143781233871345485
+      sprite_items_88: -3409251654495535374
+      sprite_items_113: 3905516148304218036
+      sprite_items_33: -1402945506758018482
+      sprite_items_52: -732233683579411868
+      sprite_items_111: -4012344203504200183
+      sprite_items_61: -311648145034457789
+      sprite_items_62: 205135032396696737
+      sprite_items_48: -3596832653683198004
+      sprite_items_104: -1720704227330518919
+      sprite_items_83: -7832982085077519709
+      sprite_items_25: 3069679114947738666
+      sprite_items_90: -5923239140362708277
+      sprite_items_21: 7850913955669060686
+      sprite_items_20: -8176136246482338183
+      sprite_items_94: 8210867823191630071
+      sprite_items_112: 5274743765501075004
+      sprite_items_68: -2403565400695992165
+      sprite_items_96: 1984796921963980738
+      sprite_items_2: 2957127108187555240
+      sprite_items_51: 878124709272822931
+      sprite_items_66: -2030711121963727351
+      sprite_items_84: -4904076731370483007
+      sprite_items_69: -4884779019858907624
+      sprite_items_117: -7920554933353978428
+      sprite_items_102: 2686541776966813372
+      sprite_items_16: 7269334162343707776
+      sprite_items_57: -3908294352617474709
+      sprite_items_76: 6171903976884657135
+      sprite_items_101: 7774370590816303981
+      sprite_items_93: -8138459091648710101
+      sprite_items_50: -1497068763731289786
+      sprite_items_14: -6829208128941288417
+      sprite_items_86: 1146912611168937831
+      sprite_items_22: -3903273229249315364
+      sprite_items_110: -3975419963600209590
+      sprite_items_70: -6720802450806915906
+      sprite_items_8: 4515148191445370536
+      sprite_items_82: -2846040471401531840
+      sprite_items_12: -6649865184110683755
+      sprite_items_24: -6377030089657613653
+      sprite_items_108: -7858463601329881017
+      sprite_items_123: 7228498334448735321
+      sprite_items_9: -569325460869334079
+      sprite_items_44: -6763396600491276456
+      sprite_items_55: -876872952307771753
+      sprite_items_64: -3464973185507486308
+      sprite_items_65: 1511321646295829445
+      sprite_items_32: -203382236529789317
+      sprite_items_31: -666797842647731695
+      sprite_items_36: -4657203308606243507
+      sprite_items_107: 4289736564312800398
+      sprite_items_0: -5558816579510887396
+      sprite_items_59: 5825758541452252205
+      sprite_items_80: -4106007279753138831
+      sprite_items_5: -5777954866554722888
+      sprite_items_39: 3227412094252674498
+      sprite_items_1: 4834821917934931748
+      sprite_items_43: 4885795406773692215
+      sprite_items_72: 4682923076571560093
+      sprite_items_100: 6887096541004425351
+      sprite_items_49: 5465373908641028931
+      sprite_items_27: -8527883323647652179
+      sprite_items_11: 8276626890105028578
+      sprite_items_75: -4086031181245071975
+      sprite_items_79: 5505817588415962604
+      sprite_items_41: 7252972614315386667
+      sprite_items_71: -7219654985912121696
+      sprite_items_67: -441276359632372410
+      sprite_items_91: -2875632513373631121
   spritePackingTag: 
   pSDRemoveMatte: 0
-  pSDShowRemoveMatteOption: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 

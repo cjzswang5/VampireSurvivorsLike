@@ -4,14 +4,14 @@ using UnityEngine;
 
 public enum PlayerState     // 玩家动作状态
 {
-    Idle = 0,
-    Move = 1,
+    Idle    = 0,
+    Move    = 1,
 };
 
 public enum PlayerToward    // 玩家朝向
 {
-    Left = 0,
-    Right = 1,
+    Left    = 0,
+    Right   = 1,
 };
 
 public class MainCharacterControl : MonoBehaviour
@@ -33,11 +33,11 @@ public class MainCharacterControl : MonoBehaviour
         }
     }
 
+    [SerializeField] Animator animator;
+    [SerializeField] SpriteRenderer spriteRenderer;
+
     Vector3 tmpVector3 = new Vector3();
     Vector3 currLocalPosition = new Vector3();
-
-    Animator animator;
-    SpriteRenderer spriteRenderer;
 
     const float SPEED_MUL = 100f;
 
@@ -58,10 +58,10 @@ public class MainCharacterControl : MonoBehaviour
         m_state = PlayerState.Idle;
         currLocalPosition = new Vector3(0f, 0f, 0f);
         transform.localPosition = currLocalPosition;
-        animator = gameObject.GetComponent<Animator>();
+        //animator = gameObject.GetComponent<Animator>();
         m_toward = PlayerToward.Left;
         onTowardChange += OnTowardChange;
-        spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
+        //spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
     }
 
     void Start()
