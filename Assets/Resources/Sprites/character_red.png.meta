@@ -232,7 +232,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -270,7 +270,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 0
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -1751,9 +1751,9 @@ TextureImporter:
       character_red_50: -8464675618855278429
       character_red_58: 7451666696269101996
       character_red_47: -1619996831741143854
+      character_red_60: 1054306232974201060
       character_red_48: -5188879939571684626
       character_red_17: -8037164600107657592
-      character_red_60: 1054306232974201060
       character_red_27: -1227053691339868584
       character_red_16: -6180308574883345616
       character_red_19: -4582611246885012354
