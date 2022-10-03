@@ -26,6 +26,8 @@ public class HierarchyToggleDrawer
 
         if (newBool != gameObject.activeSelf) {
             gameObject.SetActive(newBool);
+            if (Application.isPlaying)
+                return;
             PrefabStage prefabStage = PrefabStageUtility.GetCurrentPrefabStage();
             if (prefabStage == null) {
                 EditorSceneManager.MarkSceneDirty(EditorSceneManager.GetActiveScene());
