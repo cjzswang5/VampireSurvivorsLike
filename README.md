@@ -1,2 +1,2 @@
 # VampireSurvivorsLike
-练手项目
+目前啥都没有~~
